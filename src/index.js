@@ -13,8 +13,8 @@ import LoadingPage from './components/loading/Loading';
 import { Grommet } from 'grommet'
 
 const LoadableApp = Loadable({
-    loader: App,
-    loading: LoadingPage
+    loader: () => App,
+    loading: () => LoadingPage
 })
 
 ReactDOM.render(
