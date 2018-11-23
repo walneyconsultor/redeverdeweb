@@ -10,7 +10,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 import LoadingPage from './components/loading/Loading';
 
-import { Grommet } from 'grommet'
+import { Grommet } from 'grommet';
+import grommetTheme from './grommet';
 
 const LoadableApp = Loadable({
     loader: () => App,
@@ -18,7 +19,7 @@ const LoadableApp = Loadable({
 })
 
 ReactDOM.render(
-    <Grommet plain full={true}>
+    <Grommet theme={grommetTheme} full={true}>
         <Router>
             <Switch>
                 <Route exact strict path="/" component={App}></Route>
