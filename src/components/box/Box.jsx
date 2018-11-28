@@ -16,7 +16,7 @@ const boxSettings = {
 
 const ContentBox = ({ children, color }) => <Box background={{
         color,
-        dark: true,
+        dark: true, 
         opacity: false,
         position: "center"
     }} {...boxSettings} >{children}</Box>;
