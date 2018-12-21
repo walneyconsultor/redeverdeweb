@@ -19,7 +19,7 @@ class App extends Component {
 
   toggleLoginForm = (e) => {
     e.preventDefault();
-    this.setState({ loginFormOpen: !this.state.loginFormOpen })
+    this.setState({ loginFormOpen: !this.state.loginFormOpen });
   }
 
   render() {
