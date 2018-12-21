@@ -22,7 +22,7 @@ ReactDOM.render(
     <Grommet theme={grommetTheme} full={true}>
         <Router>
             <Switch>
-                <Route exact strict path="/" component={App}></Route>
+                <Route exact path="/" component={App}></Route>
             </Switch>
         </Router>
     </Grommet>

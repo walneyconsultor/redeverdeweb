@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import style from './style.scss';
 import '../../global.css';
 
-const HeroButton = ({ text, primary }) => (
-  <a href="#" className='Button' data-primary={primary}>
+const HeroButton = ({ text, primary, onclick }) => (
+  <a onClick={(e) => onclick(e)} href="#" className='Button' data-primary={primary}>
     {text}
   </a>
 );

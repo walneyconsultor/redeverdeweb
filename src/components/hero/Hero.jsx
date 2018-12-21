@@ -7,9 +7,7 @@ import '../../global.css';
 import Logo from '../../assets/images/logo2.png';
 import Background from '../../assets/images/leaf.jpg'
 
-console.log(Logo); 
-
-const Hero = ({ title, description }) => (
+const Hero = ({ title, description, firstButtonClick, secondButtonClick }) => (
   <div
     className='Hero'
     style={{ backgroundColor: '#D8DCD9' }}
@@ -23,8 +21,8 @@ const Hero = ({ title, description }) => (
       <h2>{title}</h2>
       <p>{description}</p>
       <div className='button-wrapper'>
-        <HeroButton primary text="CRIE A SUA CONTA" />
-        <HeroButton primary={false} text="ENTRE AGORA" />
+        <HeroButton primary text="CRIE A SUA CONTA" onclick={firstButtonClick} />
+        <HeroButton primary={false} text="ENTRE AGORA" onclick={secondButtonClick} />
       </div>
     </div>
     <div className='overlay'></div>

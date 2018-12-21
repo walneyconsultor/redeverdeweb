@@ -3,10 +3,9 @@ import React, { Component } from 'react';
 import { Box, Layer, Heading, FormField, TextInput, Button } from 'grommet';
 import { Add, Close, FormClose, StatusGood, Trash } from "grommet-icons";
 
-const LoginModal = ({ isOpen }) => {
+const LoginModal = ({ isOpen, onClose }) => {
     return (
         <Box fill align="center" justify="center">
-          <Button icon={<Add />} label="Sign In" onClick={() => {}} />
           {isOpen && (
             <Layer
               position="right"
@@ -27,7 +26,7 @@ const LoginModal = ({ isOpen }) => {
                   <Heading level={2} margin="none">
                     Entre agora
                   </Heading>
-                  <Button icon={<Close />} onClick={() => {}} />
+                  <Button icon={<Close />} onClick={(e) => onClose(e)} />
                 </Box>
                 <Box flex="grow" overflow="auto" pad={{ vertical: "medium" }}>
                   <FormField label="Email">

@@ -13,23 +13,25 @@ import LoginModal from './components/login-modal';
 class App extends Component {
 
   state = {
-    loginFormOpen: true,
+    loginFormOpen: false,
     registerFormOpen: false
   };
 
-  onSelectPlace = place => {
-    this.setState({ places: [{ color: "white", location: place }] });
-  };
+  toggleLoginForm = (e) => {
+    e.preventDefault();
+    this.setState({ loginFormOpen: !this.state.loginFormOpen })
+  }
 
   render() {
-
-    const { places } = this.state;
 
     return (
       <div className="App">
 
         <header className="App-header">
-          <Hero/>
+          <Hero
+            firstButtonClick={() => {}}
+            secondButtonClick={this.toggleLoginForm}
+          />
         </header>
 
         <ContentBox color="#33633e">
@@ -38,7 +40,9 @@ class App extends Component {
           </BigText>
         </ContentBox>
 
-        <LoginModal isOpen={this.state.loginFormOpen} />
+        <LoginModal
+            onClose={this.toggleLoginForm}
+            isOpen={this.state.loginFormOpen} />
 
       </div>
     );
